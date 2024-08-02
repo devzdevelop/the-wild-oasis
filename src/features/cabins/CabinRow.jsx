@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { formatCurrency } from '../../utils/helpers';
+import Button from '../../ui/Button';
 const TableRow = styled.div`
 	display: grid;
 	grid-template-columns: 0.6fr 1.8fr 2.2fr 1fr 1fr 1fr;
@@ -49,7 +50,12 @@ function CabinRow({ cabin }) {
 			<div>{maxCapacity}</div>
 			<Price>{regularPrice}</Price>
 			<Discount>{discount}</Discount>
-			<button>Delete</button>
+			<Button
+				size='small'
+				variation='danger'
+			>
+				Delete
+			</Button>
 		</TableRow>
 	);
 }
