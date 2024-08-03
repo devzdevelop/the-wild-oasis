@@ -57,8 +57,8 @@ function CabinRow({ cabin }) {
 	const queryClient = useQueryClient();
 
 	const {
-		isPending: isDeleting,
-		isSuccess: isDeleted,
+		// isPending: isDeleting,
+		isSuccess: isDeleting,
 		mutate,
 	} = useMutation({
 		mutationFn: deleteCabin,
@@ -82,9 +82,9 @@ function CabinRow({ cabin }) {
 				onClick={() => mutate(cabinId)}
 				size='small'
 				variation='danger'
-				disabled={isDeleted}
+				disabled={isDeleting}
 			>
-				{isDeleted ? 'Deleting...' : 'Delete'}
+				{isDeleting ? 'Deleting...' : 'Delete'}
 			</Button>
 		</TableRow>
 	);
