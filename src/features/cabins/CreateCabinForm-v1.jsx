@@ -21,9 +21,7 @@ const Error = styled.span`
 	color: var(--color-red-700);
 `;
 
-function CreateCabinForm({ cabinToEdit = {} }) {
-	const { id: editId, ...editValues } = cabinToEdit; // This is where I paused.
-
+function CreateCabinForm() {
 	const queryClient = useQueryClient();
 	const { register, handleSubmit, reset, getValues, formState } = useForm();
 	const { errors } = formState;
@@ -167,5 +165,4 @@ function CreateCabinForm({ cabinToEdit = {} }) {
 
 export default CreateCabinForm;
 
-// some updates that was mades
 // some updates
