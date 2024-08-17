@@ -22,7 +22,7 @@ const Error = styled.span`
 `;
 
 function CreateCabinForm({ cabinToEdit = {} }) {
-	const { id: editId, ...editValues } = cabinToEdit; // This is where I paused..
+	const { id: editId, ...editValues } = cabinToEdit; // This is where I paused.
 
 	const queryClient = useQueryClient();
 	const { register, handleSubmit, reset, getValues, formState } = useForm();
